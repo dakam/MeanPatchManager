@@ -1,6 +1,6 @@
 # meanPatchManager Restful API
 
-meanPatchManager is an application that enables companies to keep track of Patching information to enable them keep systems pached on time
+meanPatchManager is an application that enables companies to keep track of their systems Patching information hence reducing the risk of systems security attacks and exploitations
 
 ## Features
 
