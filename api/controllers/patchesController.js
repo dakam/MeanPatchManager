@@ -7,7 +7,6 @@ module.exports.PatchesGetAll = function(req, res) {
     let offset=  0;
     let count =7;
     let countMax =7;
-  
 
     if(req.query && req.query.offset && req.query.count) {
 
@@ -62,9 +61,6 @@ module.exports.PatchesGetOne = function(req, res) {
             res.status(response.status).json(response.message);
             return;
         })
-
-
-
     }
 
 }
@@ -122,7 +118,7 @@ module.exports.PatchesFullUpdateOne = function(req, res) {
                 message: patch,
             }
             if(err) {
-                response.status = 200;
+                response.status = 500;
                 response.message = err;
             } else if(! patch) {
     
@@ -134,7 +130,6 @@ module.exports.PatchesFullUpdateOne = function(req, res) {
 
                 res.status(response.status).json(response.message);
             } else {
-
 
                 patch.name= req.body.name;
                 patch.description= req.body.description;
@@ -187,7 +182,7 @@ module.exports.PatchesPartialUpdateOne = function(req, res) {
                 message: patch,
             }
             if(err) {
-                response.status = 200;
+                response.status = 500;
                 response.message = err;
             } else if(! patch) {
     
@@ -230,9 +225,7 @@ module.exports.PatchesPartialUpdateOne = function(req, res) {
                     res.status(response.status).json(response.message);
 
 
-                })
-
-                
+                })               
 
             }
           
@@ -260,7 +253,7 @@ module.exports.PatchesDeleteOne = function(req, res) {
                 message: deletedPatch,
             }
             if(err) {
-                response.status = 200;
+                response.status = 500;
                 response.message = err;
             } else if(! deletedPatch) {
     
