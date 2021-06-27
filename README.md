@@ -25,7 +25,7 @@ Clone or download the project
 git clone https://github.com/dakam/MeanPatchManager.git
 ```
 
-change current directory to wouldyouratherapp
+change current directory to meanPatchManager
 
 ```
 cd MeanPatchManager
